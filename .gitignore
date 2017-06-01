@@ -1,0 +1,12 @@
+# python system files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# IDE
+.idea
+
+# virtualenv
+.venv
+venv/
+
