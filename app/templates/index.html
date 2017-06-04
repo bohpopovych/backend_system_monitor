@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>System Monitor</title>
+    <style>
+        .center {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="center">System Resources</h1>
+    <section>
+        <h2 class="center">Memory Total</h2>
+        <p class="center">{{ memory }}</p>
+    </section>
+    <section>
+        <h2 class="center">CPU Percent</h2>
+        <p class="center">{{ cpu_percent }}</p>
+    </section>
+    <section>
+        <h2 class="center">Disc Usage</h2>
+        <p class="center">{{ disk_memory }}</p>
+    </section>
+    <section>
+        <h2 class="center">Network</h2>
+        <p class="center">{{ network }}</p>
+    </section>
+    <section>
+        <h2 class="center">Sensors</h2>
+        <p class="center">{{ sensors }}</p>
+    </section>
+    <h1 class="center">System Information</h1>
+    <section>
+        <h2 class="center">Sensors</h2>
+        <p class="center">{{ sys_info }}</p>
+    </section>
+</body>
+</html>

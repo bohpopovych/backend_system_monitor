@@ -1,5 +1,5 @@
 from flask import Blueprint
 
-rest = Blueprint('rest', __name__)
+api = Blueprint('api', __name__)
 
-from . import routes
+from .system import *
