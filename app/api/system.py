@@ -48,7 +48,7 @@ def get_system_resources():
         'cpu': set_id_to_cpu(psutil.cpu_percent(percpu=True)),
         'disk_memory': tuple_to_dict(psutil.disk_usage('/')),
         'network': tuple_to_dict(psutil.net_io_counters()),
-        'sensors': sensors_data_compact(psutil.sensors_temperatures())
+        'sensors': psutil.sensors_temperatures()
     })
 
 
