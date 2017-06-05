@@ -32,9 +32,10 @@ def sensors_data_compact(dict):
     count = 0
 
     for item in dict:
-        count += 1
 
         for i, value in enumerate(dict[item]):
+            count += 1
+
             new_list.append({'id': count, 'name': dict[item][i][0], 'temp': dict[item][i][1]})
     return new_list
 
