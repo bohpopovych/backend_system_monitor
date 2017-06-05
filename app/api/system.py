@@ -56,7 +56,7 @@ def get_system_resources():
 @cross_origin(origin="*")
 def get_system_information():
     return jsonify({
-        'sys_info': tuple_to_dict(platform.uname()),
-        'current_time':  int(round(time())),
+        'sys_info': platform.uname(),
+        # 'current_time':  int(round(time())),
         'up_time': psutil.boot_time()
     })
