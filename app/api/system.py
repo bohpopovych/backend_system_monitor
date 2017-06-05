@@ -35,7 +35,7 @@ def sensors_data_compact(dict):
 
         for i, value in enumerate(dict[item]):
             count += 1
-
+            
             new_list.append({'id': count, 'name': dict[item][i][0], 'temp': dict[item][i][1]})
     return new_list
 
@@ -48,7 +48,7 @@ def get_system_resources():
         'cpu': set_id_to_cpu(psutil.cpu_percent(percpu=True)),
         'disk_memory': tuple_to_dict(psutil.disk_usage('/')),
         'network': tuple_to_dict(psutil.net_io_counters()),
-        'sensors': psutil.sensors_temperatures()
+        'sensors': sensors_data_compact(psutil.sensors_temperatures())
     })
 
 
@@ -57,6 +57,6 @@ def get_system_resources():
 def get_system_information():
     return jsonify({
         'sys_info': tuple_to_dict(platform.uname()),
-        # 'current_time':  int(round(time())),
+        'current_time':  int(round(time())),
         'up_time': psutil.boot_time()
     })
